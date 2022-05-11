@@ -1,0 +1,27 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="text-center">Materiels</h1>
+
+
+  <div id="materiels">
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Empruntable</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @materiels.each do |materiel| %>
+    <%= render materiel %>
+  <% end %>
+</tbody>
+</table>
+</div>
+
+  <%= link_to "New materiel", new_materiel_path , class:"btn btn-success" %>
+
+</div>

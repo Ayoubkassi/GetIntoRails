@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: 
+  name: MyString
+  auteur: MyString
+  type: 
+  is_empruntable: false
+
+two:
+  isbn: 
+  name: MyString
+  auteur: MyString
+  type: 
+  is_empruntable: false

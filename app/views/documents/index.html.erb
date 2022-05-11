@@ -1,0 +1,28 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="text-center">Documents</h1>
+
+
+  <div id="documents">
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Auteur</th>
+      <th scope="col">Type</th>
+      <th scope="col">Empruntable</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @documents.each do |document| %>
+    <%= render document %>
+  <% end %>
+</tbody>
+</table>
+</div>
+
+  <%= link_to "New document", new_document_path , class:"btn btn-success" %>
+
+</div>

@@ -1,0 +1,19 @@
+
+
+
+<tr id="<%= dom_id document %>">
+    <td><%= document.name %></td>
+    <td><%= document.auteur %></td>
+    <td><%= document.type_doc %></td>
+    <td><%= document.is_empruntable %></td>
+    <div class="container">
+    <td class="row">
+      <div class="">
+        <button class="btn btn-info"><%= link_to "Show this document", document , class:"text-white" %></button>
+      </div>
+      <div class="">
+        <%= button_to "Destroy this document", document, method: :delete , class:"btn btn-danger ml-2" %>
+      </div>
+    </td>
+    </div>
+</tr>

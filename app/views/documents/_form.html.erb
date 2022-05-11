@@ -1,0 +1,42 @@
+<%= form_with(model: document) do |form| %>
+  <% if document.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+        <% document.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+>
+
+<div style="width: 700px ; margin: 0px auto">
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name ,  class:"form-control"%>
+  </div>
+
+  <div>
+    <%= form.label :auteur, style: "display: block" %>
+    <%= form.text_field :auteur ,  class:"form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :type_doc, style: "display: block" %>
+    <%= form.text_field :type_doc ,  class:"form-control" %>
+  </div>
+
+  <div style="display:flex; align-items:center" class="mt-4">
+    <%= form.label :is_empruntable, style: "display: block" %>
+    <%= form.check_box :is_empruntable ,  class:"form-control"%>
+  </div>
+
+  <div>
+    <%= form.submit class:"btn btn-success mt-4"%>
+  </div>
+</div>
+
+<% end %>

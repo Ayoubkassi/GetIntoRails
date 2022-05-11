@@ -1,0 +1,22 @@
+<div class="container mt-4">
+
+<p style="color: green"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="d-flex justify-content-between">
+    <h1 class="display-2"><%= @materiel.name %></h1>
+    <img src="https://picsum.photos/150/150" style="border-radius: 50%" >
+  </div>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p><strong>Type : </strong><%= @materiel.type_mat %></p>
+  <p><strong>Empruntable : </strong><%= @materiel.is_empruntable %></p>
+</div>
+
+<div>
+  <%= link_to "Edit this materiel", edit_materiel_path(@materiel) , class:"btn btn-secondary" %>
+  <%= link_to "Back to materiels", materiels_path , class:"btn btn-secondary" %>
+  <%= button_to "Destroy this materiel", @materiel, method: :delete , class:"btn btn-danger mt-4" %>
+</div>
+
+</div>

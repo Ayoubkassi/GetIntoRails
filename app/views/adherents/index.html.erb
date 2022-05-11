@@ -1,0 +1,26 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="text-center">Adherents</h1>
+
+
+  <div id="adherents">
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @adherents.each do |adherent| %>
+    <%= render adherent %>
+  <% end %>
+</tbody>
+</table>
+</div>
+
+  <%= link_to "New adherent", new_adherent_path , class:"btn btn-success" %>
+
+</div>
